@@ -27,5 +27,15 @@ package s7Bank;
 				return false;
 			} 
 		}
+		public boolean transfere2(double valor, Conta destino) {
+			if(this.saldo>=valor) {
+				saca(valor);
+				destino.deposita(valor);
+				return true;
+			}
+				return false;
+		}
+			
+		}
 	}
 	

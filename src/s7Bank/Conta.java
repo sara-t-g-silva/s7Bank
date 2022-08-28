@@ -5,7 +5,7 @@ package s7Bank;
 		double saldo;
 		int agencia;
 		int numero;
-		String titular;
+		Cliente titular; // adicionando atributo do tipo Cliente, cria uma flexa para o objeto cliente;
 		
 		public void deposita(double valor) {
 			this.saldo += valor; 
@@ -29,13 +29,13 @@ package s7Bank;
 		}
 		public boolean transfere2(double valor, Conta destino) {
 			if(this.saldo>=valor) {
-				saca(valor);
-				destino.deposita(valor);
+				saca(valor); // reciclagem do metodo saca
+				destino.deposita(valor); // reciclagem do metodo deposita
 				return true;
 			}
 				return false;
 		}
 			
 		}
-	}
+	
 	

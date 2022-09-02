@@ -2,10 +2,10 @@ package s7Bank;
 
 	public class Conta {
 
-		double saldo;
-		int agencia;
-		int numero;
-		Cliente titular; // adicionando atributo do tipo Cliente, cria uma flexa para o objeto cliente;
+		private double saldo;
+		private int agencia;
+		private int numero;
+		private Cliente titular; //adicionando atributo do tipo Cliente, cria uma flexa para o objeto cliente;
 		
 		public void deposita(double valor) {
 			this.saldo += valor; 
@@ -34,6 +34,32 @@ package s7Bank;
 				return true;
 			}
 				return false;
+		}
+		
+		public double getSaldo() { //get metodo com retorno de resposta, saldo
+			return this.saldo;
+		}
+		
+		public int getNumero() {
+			return this.numero;
+		}
+		
+		public void setNumero(int numero) {
+			this.numero = numero; // numero em azul atributo da conta, nnumero em roxo, variável temporária do método setNumero.
+		}
+		
+		public int getAgencia() {
+			return this.agencia;
+		}
+		public void setAgencia(int agencia) {
+			this.agencia = agencia;
+		}
+		
+		public Cliente getTitular() {
+			return this.titular;
+		}
+		public void setTitular(Cliente titular) {
+			this.titular = titular;
 		}
 			
 		}

@@ -6,6 +6,18 @@ package s7Bank;
 		private int agencia;
 		private int numero;
 		private Cliente titular; //adicionando atributo do tipo Cliente, cria uma flexa para o objeto cliente;
+		private static int total =0; // static se refere a class Conta;
+		
+		
+		public Conta(int agencia, int numero) {
+			Conta.total++;
+			this.agencia = agencia;
+			this.numero = numero;
+			this.saldo = 100; // toda conta inicia com valor de 100.
+			
+			System.out.println("Adicionando uma conta!");
+			
+		}
 		
 		public void deposita(double valor) {
 			this.saldo += valor; 
@@ -60,6 +72,10 @@ package s7Bank;
 		}
 		public void setTitular(Cliente titular) {
 			this.titular = titular;
+		}
+		
+		public static int getTotal() {
+			return Conta.total;
 		}
 			
 		}

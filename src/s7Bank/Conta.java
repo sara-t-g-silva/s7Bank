@@ -13,9 +13,9 @@ package s7Bank;
 			Conta.total++;
 			this.agencia = agencia;
 			this.numero = numero;
-			this.saldo = 100; // toda conta inicia com valor de 100.
+			//this.saldo = 100; // toda conta inicia com valor de 100.
 			
-			System.out.println("Adicionando uma conta!");
+			//System.out.println("Adicionando uma conta!");
 			
 		}
 		
@@ -30,15 +30,15 @@ package s7Bank;
 				return false;
 			}
 		}
-		public boolean transfere(double valor, Conta destino) {
-			if(this.saldo>=valor) {
-				this.saldo-=valor;
-				destino.deposita(valor);
-				return true;
-			}else {
-				return false;
-			} 
-		}
+//		public boolean transfere(double valor, Conta destino) {
+//			if(this.saldo>=valor) {
+//				this.saldo-=valor;
+//				destino.deposita(valor);
+//				return true;
+//			}else {
+//				return false;
+//			} 
+//		}
 		public boolean transfere2(double valor, Conta destino) {
 			if(this.saldo>=valor) {
 				saca(valor); // reciclagem do metodo saca

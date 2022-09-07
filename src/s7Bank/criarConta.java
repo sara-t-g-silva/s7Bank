@@ -4,7 +4,7 @@ public class criarConta {
 	
 	public static void main (String [] args) {
 		
-		Conta primeiraConta = new Conta(050,1234);
+		Conta primeiraConta = new ContaCorrente(050,1234);
 		
 		primeiraConta.deposita(200);
 		
@@ -12,7 +12,7 @@ public class criarConta {
 		primeiraConta.deposita(100); 
 		System.out.println(primeiraConta.getSaldo());
 		
-		Conta segundaConta = new Conta(050,1112); // necessario passar parametro exigido no construtor.
+		Conta segundaConta = new ContaCorrente(050,1112); // necessario passar parametro exigido no construtor.
 		
 		segundaConta.deposita(50);
 		System.out.println(segundaConta.getSaldo());

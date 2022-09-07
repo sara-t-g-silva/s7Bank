@@ -4,9 +4,9 @@ package s7Bank;
 		
 		public static void main (String[]args) {
 			
-			Conta contaTeste = new Conta(050,1123);
+			Conta contaTeste = new ContaCorrente(050,1123);
 			
-			Conta contaTeste2 = new Conta(050,1133);
+			Conta contaTeste2 = new ContaCorrente(050,1133);
 			
 			contaTeste.deposita(100);
 			contaTeste2.deposita(1000);

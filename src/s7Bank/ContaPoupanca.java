@@ -6,4 +6,12 @@ public class ContaPoupanca extends Conta {
 		super(agencia, numero); // super se referencia a class mãe ou super class, palavra reservada do java;
 	}
 
+	
+	public void deposita(double valor) {
+		super.saldo += valor;
+		
+	}
+	
+	
+
 }

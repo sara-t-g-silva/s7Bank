@@ -1,8 +1,8 @@
 package s7Bank;
 
-	public class Conta {
+	public abstract class Conta {
 
-		private double saldo;
+		protected double saldo;
 		private int agencia;
 		private int numero;
 		private Cliente titular; //adicionando atributo do tipo Cliente, cria uma flexa para o objeto cliente;
@@ -18,10 +18,10 @@ package s7Bank;
 			//System.out.println("Adicionando uma conta!");
 			
 		}
+		//método abstract, deve ser implementado nas classes filhas
+		public abstract void deposita(double valor);
 		
-		public void deposita(double valor) {
-			this.saldo += valor; 
-		}
+		
 		public boolean saca(double valor) {
 			if(this.saldo>=valor) {
 				saldo-=valor;
@@ -31,7 +31,7 @@ package s7Bank;
 			}
 		}
 //		public boolean transfere(double valor, Conta destino) {
-//			if(this.saldo>=valor) {
+//			if(this.saldo>=valor) { // metódo não funciona com a regra de negócio "saca" implementada em cc, pois não chama o método saca.
 //				this.saldo-=valor;
 //				destino.deposita(valor);
 //				return true;

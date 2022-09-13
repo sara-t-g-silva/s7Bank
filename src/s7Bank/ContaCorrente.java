@@ -1,6 +1,6 @@
 package s7Bank;
 
-public class ContaCorrente extends Conta {
+public class ContaCorrente extends Conta implements Tributavel {
 	 
 	public ContaCorrente(int agencia, int numero) { // herda tudo da class Conta, menos os construtores que são necessário declarar.
 		super(agencia, numero);											// cada construtor é exclusivo para cada class, mas como a class é filha da class Conta, tem que ser passado o construtor com as mesmas assinaturas.
@@ -16,5 +16,10 @@ public class ContaCorrente extends Conta {
 	
 	public void deposita(double valor) {
 		super.saldo += valor; // necessário chamar o saldo da super class;
+	}
+
+	
+	public double getValorImposto() {
+		return super.saldo * 0.01;
 	}
 }

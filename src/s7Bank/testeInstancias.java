@@ -3,7 +3,7 @@ package s7Bank;
 public class testeInstancias {
 	public static void main(String[] args) {
 		Conta conta = new ContaCorrente(50,1122);
-		Conta conta2 = new ContaCorrente(10,1134);
+		//Conta conta2 = new ContaCorrente(10,1134);
 		Cliente cliente = new Cliente();
 		//sem encapsulamento -> contaDaSara.titular = new Cliente(); // criando a instancia entre objeto Cliente e atributo titular;
 		
